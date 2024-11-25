@@ -1,3 +1,5 @@
+package kiosk;
+
 import java.util.ArrayList;
 
 public class Menu {
@@ -8,9 +10,12 @@ public class Menu {
 
     // 2. 생성자 (조립설명서)
     public Menu () {
-        menus = new ArrayList<>();
+        this.menus = new ArrayList<>();
     }
 
 
     // 3. 기능 (메서드)
+    public void addItems (MenuItem menuItem) {
+        this.menus.add(menuItem);
+    }
 }

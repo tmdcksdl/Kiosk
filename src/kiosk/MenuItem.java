@@ -1,3 +1,5 @@
+package kiosk;
+
 public class MenuItem {
 
     // 1. 속성 (필드)
@@ -6,12 +8,12 @@ public class MenuItem {
     // 이름
     private String burgerName;
     // 가격
-    private Double burgerPrice;
+    private double burgerPrice;
     // 설명
     private String burgerComment;
 
     // 2. 생성자 (조립설명서)
-    public MenuItem (String burgerName, Double burgerPrice, String burgerComment) {
+    public MenuItem (String burgerName, double burgerPrice, String burgerComment) {
         this.burgerName = burgerName;
         this.burgerPrice = burgerPrice;
         this.burgerComment = burgerComment;

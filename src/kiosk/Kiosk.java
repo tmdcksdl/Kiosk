@@ -6,11 +6,10 @@ import java.util.Scanner;
 public class Kiosk {
 
     // 1. 속성 (필드)
-    private ArrayList<MenuItem> menuItems;
 
     // 2. 생성자 (조립설명서)
     public Kiosk () {
-        this.menuItems = new ArrayList<>();
+
     }
 
     // 3. 기능 (메서드)

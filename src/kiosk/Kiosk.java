@@ -58,13 +58,13 @@ public class Kiosk {
                 System.out.println("프로그램을 종료합니다.");
                 // while문 종료.
                 break;
-            } else if (number == 1) {
+            } else if (number == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                 System.out.println("선택한 메뉴 : " + menuItems.get(0).getBurgerName() + ", " + menuItems.get(0).getBurgerPrice() + ", " + menuItems.get(0).getBurgerComment());
-            } else if (number == 2) {
+            } else if (number == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                 System.out.println("선택한 메뉴 : " + menuItems.get(1).getBurgerName() + ", " + menuItems.get(1).getBurgerPrice() + ", " + menuItems.get(1).getBurgerComment());
-            } else if (number == 3) {
+            } else if (number == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                 System.out.println("선택한 메뉴 : " + menuItems.get(2).getBurgerName() + ", " + menuItems.get(2).getBurgerPrice() + ", " + menuItems.get(2).getBurgerComment());
-            } else if (number == 4) {
+            } else if (number == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                 System.out.println("선택한 메뉴 : " + menuItems.get(3).getBurgerName() + ", " + menuItems.get(3).getBurgerPrice() + ", " + menuItems.get(3).getBurgerComment());
             }
         }

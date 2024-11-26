@@ -14,6 +14,10 @@ public class Menu {
     }
 
     // 3. 기능 (메서드)
+    public void addHamburger (MenuItem menuItem) {
+        this.menuItems.add(menuItem);
+    }
+
     public void printHamburger (ArrayList<MenuItem> menuItems) {
         int i = 1;
         for (MenuItem menu : menuItems) {

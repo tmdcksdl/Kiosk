@@ -37,8 +37,9 @@ public class Kiosk {
             // 안내 문구 출력
             System.out.println("[ SHAKESHACK MENU ]");
 
-            menu.printHamburger(menuItems);
-            System.out.println(String.format("0. %-15s | %s", "종료", "종료"));
+            menu.printHamburger();
+
+            System.out.println(String.format("0. %-14s | %s", "종료", "종료"));
             // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
             int number = scanner.nextInt();
 
@@ -49,13 +50,13 @@ public class Kiosk {
                 // while문 종료.
                 break;
             } else if (number == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
-                System.out.println("선택한 메뉴 : " + menuItems.get(0).getBurgerName() + ", " + menuItems.get(0).getBurgerPrice() + ", " + menuItems.get(0).getBurgerComment());
+                System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(0).getBurgerName() + ", " + menu.getMenuItems().get(0).getBurgerPrice() + ", " + menu.getMenuItems().get(0).getBurgerComment());
             } else if (number == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
-                System.out.println("선택한 메뉴 : " + menuItems.get(1).getBurgerName() + ", " + menuItems.get(1).getBurgerPrice() + ", " + menuItems.get(1).getBurgerComment());
+                System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(1).getBurgerName() + ", " + menu.getMenuItems().get(1).getBurgerPrice() + ", " + menu.getMenuItems().get(1).getBurgerComment());
             } else if (number == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
-                System.out.println("선택한 메뉴 : " + menuItems.get(2).getBurgerName() + ", " + menuItems.get(2).getBurgerPrice() + ", " + menuItems.get(2).getBurgerComment());
+                System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(2).getBurgerName() + ", " + menu.getMenuItems().get(2).getBurgerPrice() + ", " + menu.getMenuItems().get(2).getBurgerComment());
             } else if (number == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
-                System.out.println("선택한 메뉴 : " + menuItems.get(3).getBurgerName() + ", " + menuItems.get(3).getBurgerPrice() + ", " + menuItems.get(3).getBurgerComment());
+                System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(3).getBurgerName() + ", " + menu.getMenuItems().get(3).getBurgerPrice() + ", " + menu.getMenuItems().get(3).getBurgerComment());
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                 continue;

@@ -18,6 +18,8 @@ public class Kiosk {
         // 사용자로부터 입력을 받기 위해 Scanner 객체 생성.
         Scanner scanner = new Scanner(System.in);
 
+        Menu menu = new Menu();
+
         // 햄버거 객체 생성
         MenuItem hamburger1 = new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거");
         MenuItem hamburger2 = new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거");
@@ -25,29 +27,17 @@ public class Kiosk {
         MenuItem hamburger4 = new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거");
 
         // 햄버거 리스트에 햄버거 저장.
-        menuItems.add(hamburger1);
-        menuItems.add(hamburger2);
-        menuItems.add(hamburger3);
-        menuItems.add(hamburger4);
+        menu.addHamburger(hamburger1);
+        menu.addHamburger(hamburger2);
+        menu.addHamburger(hamburger3);
+        menu.addHamburger(hamburger4);
 
         // while문 실행.
         while (true) {
             // 안내 문구 출력
             System.out.println("[ SHAKESHACK MENU ]");
-            int i = 1;
 
-            // for문을 사용해서 메뉴 리스트에서 메뉴 하나씩 출력.
-            for (MenuItem menuItem : menuItems) {
-                System.out.println(
-                        String.format(
-                                "%-2d. %-15s | W %-6.2f | %s",
-                                i++,                            // 번호
-                                menuItem.getBurgerName(),       // 버거 이름 (15자 너비)
-                                menuItem.getBurgerPrice(),      // 버거 가격 (6자리 너비)
-                                menuItem.getBurgerComment()
-                        )
-                );
-            }
+            menu.printHamburger(menuItems);
             System.out.println(String.format("0. %-15s | %s", "종료", "종료"));
             // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
             int number = scanner.nextInt();

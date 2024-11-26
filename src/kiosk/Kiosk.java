@@ -66,6 +66,9 @@ public class Kiosk {
                 System.out.println("선택한 메뉴 : " + menuItems.get(2).getBurgerName() + ", " + menuItems.get(2).getBurgerPrice() + ", " + menuItems.get(2).getBurgerComment());
             } else if (number == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                 System.out.println("선택한 메뉴 : " + menuItems.get(3).getBurgerName() + ", " + menuItems.get(3).getBurgerPrice() + ", " + menuItems.get(3).getBurgerComment());
+            } else {
+                System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
+                continue;
             }
         }
     }

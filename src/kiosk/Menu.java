@@ -18,12 +18,16 @@ public class Menu {
         this.menuItems.add(menuItem);
     }
 
-    public void printHamburger (ArrayList<MenuItem> menuItems) {
+    public ArrayList<MenuItem> getMenuItems () {
+        return this.menuItems;
+    }
+
+    public void printHamburger () {
         int i = 1;
         for (MenuItem menu : menuItems) {
             System.out.println(
                     String.format(
-                            "%-2d. %-15s | W %-6.2f | %s",
+                            "%-1d. %-15s | W %-3.1f | %s",
                             i++,                            // 번호
                             menu.getBurgerName(),       // 버거 이름 (15자 너비)
                             menu.getBurgerPrice(),      // 버거 가격 (6자리 너비)

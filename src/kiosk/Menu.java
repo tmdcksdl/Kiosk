@@ -81,7 +81,7 @@ public class Menu {
         for (MenuItem menu : menuDesserts) {
             System.out.println(
                     String.format(
-                            "%-1d. %-15s | W %-3.1f | %s",
+                            "%-1d. %-19s | W %-3.1f | %s",
                             i++,                            // 번호
                             menu.getItemName(),       // 버거 이름 (15자 너비)
                             menu.getItemPrice(),      // 버거 가격 (6자리 너비)

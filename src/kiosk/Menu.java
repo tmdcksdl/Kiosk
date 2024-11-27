@@ -5,33 +5,33 @@ import java.util.ArrayList;
 public class Menu {
 
     // 1. 속성 (필드)
-    // 메뉴 목록(menus) : ArrayList
-    private ArrayList<MenuItem> menuItems;
+    // 햄버거 목록(menuHamburgers) : ArrayList
+    private ArrayList<MenuItem> menuHamburgers;
 
     // 2. 생성자 (조립설명서)
     public Menu () {
-        this.menuItems = new ArrayList<>();
+        this.menuHamburgers = new ArrayList<>();
     }
 
     // 3. 기능 (메서드)
     public void addHamburger (MenuItem menuItem) {
-        this.menuItems.add(menuItem);
+        this.menuHamburgers.add(menuItem);
     }
 
-    public ArrayList<MenuItem> getMenuItems () {
-        return this.menuItems;
+    public ArrayList<MenuItem> getHamburgerItems () {
+        return this.menuHamburgers;
     }
 
     public void printHamburger () {
         int i = 1;
-        for (MenuItem menu : menuItems) {
+        for (MenuItem menu : menuHamburgers) {
             System.out.println(
                     String.format(
                             "%-1d. %-15s | W %-3.1f | %s",
                             i++,                            // 번호
-                            menu.getBurgerName(),       // 버거 이름 (15자 너비)
-                            menu.getBurgerPrice(),      // 버거 가격 (6자리 너비)
-                            menu.getBurgerComment()
+                            menu.getItemName(),       // 버거 이름 (15자 너비)
+                            menu.getItemPrice(),      // 버거 가격 (6자리 너비)
+                            menu.getItemComment()
                     )
             );
         }

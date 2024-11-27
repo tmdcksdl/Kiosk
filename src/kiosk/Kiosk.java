@@ -1,6 +1,5 @@
 package kiosk;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Kiosk {
@@ -57,13 +56,13 @@ public class Kiosk {
                     // while문 종료.
                     break;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(0).getBurgerName() + ", " + menu.getMenuItems().get(0).getBurgerPrice() + ", " + menu.getMenuItems().get(0).getBurgerComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + ", " + menu.getHamburgerItems().get(0).getItemPrice() + ", " + menu.getHamburgerItems().get(0).getItemComment());
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(1).getBurgerName() + ", " + menu.getMenuItems().get(1).getBurgerPrice() + ", " + menu.getMenuItems().get(1).getBurgerComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + ", " + menu.getHamburgerItems().get(1).getItemPrice() + ", " + menu.getHamburgerItems().get(1).getItemComment());
                 } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(2).getBurgerName() + ", " + menu.getMenuItems().get(2).getBurgerPrice() + ", " + menu.getMenuItems().get(2).getBurgerComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + ", " + menu.getHamburgerItems().get(2).getItemPrice() + ", " + menu.getHamburgerItems().get(2).getItemComment());
                 } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getMenuItems().get(3).getBurgerName() + ", " + menu.getMenuItems().get(3).getBurgerPrice() + ", " + menu.getMenuItems().get(3).getBurgerComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + ", " + menu.getHamburgerItems().get(3).getItemPrice() + ", " + menu.getHamburgerItems().get(3).getItemComment());
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                     continue;

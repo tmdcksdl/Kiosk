@@ -25,7 +25,7 @@ public class Kiosk {
         MenuItem hamburger4 = new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거");
 
         // 음료 객체 생성
-        MenuItem drink1 = new MenuItem("Lemonade", 3.9, "매장에서 직접 만드 상큼한 레몬에이드");
+        MenuItem drink1 = new MenuItem("Lemonade", 3.9, "매장에서 직접 만든 상큼한 레몬에이드");
         MenuItem drink2 = new MenuItem("Iced Tea", 3.4, "직접 유기농 홍차를 우려낸 아이스티");
         MenuItem drink3 = new MenuItem("Fifty/Fifty", 3.5, "레몬에이드와 아이스티의 만남");
         MenuItem drink4 = new MenuItem("Soda", 2.7, "코카콜라, 코카콜라 제로, 스프라이트, 환타 오렌지, 환타 그레이프");
@@ -63,6 +63,8 @@ public class Kiosk {
             System.out.println("0. 종료");
             int number1 = scanner.nextInt();
 
+            System.out.println("===================================");
+
             if (number1 == 1) {
                 // 안내 문구 출력
                 System.out.println("[ BURGERS MENU ]");
@@ -77,18 +79,24 @@ public class Kiosk {
                 if (number2 == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
+                    System.out.println("===================================");
                     //
                     continue;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + ", " + menu.getHamburgerItems().get(0).getItemPrice() + ", " + menu.getHamburgerItems().get(0).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + " | W " + menu.getHamburgerItems().get(0).getItemPrice() + " | " + menu.getHamburgerItems().get(0).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + ", " + menu.getHamburgerItems().get(1).getItemPrice() + ", " + menu.getHamburgerItems().get(1).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + " | W " + menu.getHamburgerItems().get(1).getItemPrice() + " | " + menu.getHamburgerItems().get(1).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + ", " + menu.getHamburgerItems().get(2).getItemPrice() + ", " + menu.getHamburgerItems().get(2).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + " | W " + menu.getHamburgerItems().get(2).getItemPrice() + " | " + menu.getHamburgerItems().get(2).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + ", " + menu.getHamburgerItems().get(3).getItemPrice() + ", " + menu.getHamburgerItems().get(3).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + " | W " + menu.getHamburgerItems().get(3).getItemPrice() + " | " + menu.getHamburgerItems().get(3).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else {
-                    System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
+                    System.out.println("잘못된 입력입니다. 다시 입력해주세요 :)");
+                    System.out.println("===================================");
                     continue;
                 }
             } else if (number1 == 2) {
@@ -105,18 +113,24 @@ public class Kiosk {
                 if (number2 == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
+                    System.out.println("===================================");
                     //
                     continue;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(0).getItemName() + ", " + menu.getDrinkItems().get(0).getItemPrice() + ", " + menu.getDrinkItems().get(0).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(0).getItemName() + " | W " + menu.getDrinkItems().get(0).getItemPrice() + " | " + menu.getDrinkItems().get(0).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(1).getItemName() + ", " + menu.getDrinkItems().get(1).getItemPrice() + ", " + menu.getDrinkItems().get(1).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(1).getItemName() + " | W " + menu.getDrinkItems().get(1).getItemPrice() + " | " + menu.getDrinkItems().get(1).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(2).getItemName() + ", " + menu.getDrinkItems().get(2).getItemPrice() + ", " + menu.getDrinkItems().get(2).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(2).getItemName() + " | W " + menu.getDrinkItems().get(2).getItemPrice() + " | " + menu.getDrinkItems().get(2).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(3).getItemName() + ", " + menu.getDrinkItems().get(3).getItemPrice() + ", " + menu.getDrinkItems().get(3).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(3).getItemName() + " | W " + menu.getDrinkItems().get(3).getItemPrice() + " | " + menu.getDrinkItems().get(3).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
+                    System.out.println("===================================");
                     continue;
                 }
             } else if (number1 == 3) {
@@ -133,18 +147,24 @@ public class Kiosk {
                 if (number2 == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
+                    System.out.println("===================================");
                     //
                     continue;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(0).getItemName() + ", " + menu.getDessertItems().get(0).getItemPrice() + ", " + menu.getDessertItems().get(0).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(0).getItemName() + " | W " + menu.getDessertItems().get(0).getItemPrice() + ", " + menu.getDessertItems().get(0).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + ", " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + " | W " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + ", " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + " | W " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
-                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + ", " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + " | W " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
+                    System.out.println("-----------------------------------");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
+                    System.out.println("===================================");
                     continue;
                 }
             } else if (number1 == 0) {

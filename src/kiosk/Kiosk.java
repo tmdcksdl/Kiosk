@@ -69,16 +69,16 @@ public class Kiosk {
 
                 menu.printHamburger();
 
-                System.out.println(String.format("0. %-14s | %s", "종료", "종료"));
+                System.out.println(String.format("0. %-14s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
                 int number2 = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
                 if (number2 == 0) {
                     // 프로그램 종료 안내 문구 출력.
-                    System.out.println("프로그램을 종료합니다.");
-                    // while문 종료.
-                    break;
+                    System.out.println("Main Menu로 돌아갑니다.");
+                    //
+                    continue;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + ", " + menu.getHamburgerItems().get(0).getItemPrice() + ", " + menu.getHamburgerItems().get(0).getItemComment());
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
@@ -97,16 +97,16 @@ public class Kiosk {
 
                 menu.printDrink();
 
-                System.out.println(String.format("0. %-14s | %s", "종료", "종료"));
+                System.out.println(String.format("0. %-13s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
                 int number2 = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
                 if (number2 == 0) {
                     // 프로그램 종료 안내 문구 출력.
-                    System.out.println("프로그램을 종료합니다.");
-                    // while문 종료.
-                    break;
+                    System.out.println("Main Menu로 돌아갑니다.");
+                    //
+                    continue;
                 } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(0).getItemName() + ", " + menu.getDrinkItems().get(0).getItemPrice() + ", " + menu.getDrinkItems().get(0).getItemComment());
                 } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
@@ -120,7 +120,33 @@ public class Kiosk {
                     continue;
                 }
             } else if (number1 == 3) {
-                System.out.println("디저트 만들어야 함");
+                // 안내 문구 출력
+                System.out.println("[ DESSERTS MENU ]");
+
+                menu.printDessert();
+
+                System.out.println(String.format("0. %-17s | %s", "뒤로가기", "뒤로가기"));
+                // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
+                int number2 = scanner.nextInt();
+
+                // if문을 사용해서 number의 값이 0일 때 실행.
+                if (number2 == 0) {
+                    // 프로그램 종료 안내 문구 출력.
+                    System.out.println("Main Menu로 돌아갑니다.");
+                    //
+                    continue;
+                } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(0).getItemName() + ", " + menu.getDessertItems().get(0).getItemPrice() + ", " + menu.getDessertItems().get(0).getItemComment());
+                } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + ", " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
+                } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + ", " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
+                } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
+                    System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + ", " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
+                } else {
+                    System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
+                    continue;
+                }
             } else if (number1 == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;

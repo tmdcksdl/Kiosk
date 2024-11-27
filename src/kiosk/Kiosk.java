@@ -86,13 +86,14 @@ public class Kiosk {
 
                 menu.printHamburger();
 
-                System.out.println(String.format("0. %-14s | %s", "뒤로가기", "뒤로가기"));
+                System.out.println(String.format("0. %-13s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
                 int itemNumber = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
                 if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
+                    System.out.println("-----------------------------------");
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
@@ -167,6 +168,7 @@ public class Kiosk {
                 // if문을 사용해서 number의 값이 0일 때 실행.
                 if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
+                    System.out.println("-----------------------------------");
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
@@ -241,6 +243,7 @@ public class Kiosk {
                 // if문을 사용해서 number의 값이 0일 때 실행.
                 if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
+                    System.out.println("-----------------------------------");
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
@@ -322,18 +325,27 @@ public class Kiosk {
                 System.out.println("1. 선택 삭제        2. 전체 삭제");
                 int cancelNumber = scanner.nextInt();
 
+                System.out.println("-----------------------------------");
+
                 if (cancelNumber == 1) {
                     order.printShoppingCart();
+
                     System.out.println("어떤 항목을 삭제하시겠습니까?");
                     int cartNumber = scanner.nextInt();
 
                     order.cancelShoppingCart(cartNumber-1);
 
+                    System.out.println("-----------------------------------");
                     System.out.println("선택한 항목을 장바구니에서 삭제했습니다.");
+                    System.out.println("-----------------------------------");
 
                     order.printShoppingCart();
+
+                    System.out.println("===================================");
                 } else if (cancelNumber == 2) {
                     order.resetShoppingCart();
+                    System.out.println("장바구니를 비웠습니다.");
+                    System.out.println("===================================");
                 }
             } else if (mainNumber == 0) {
                 System.out.println("프로그램을 종료합니다.");

@@ -117,4 +117,16 @@ public class Menu {
             );
         }
     }
+
+    public double calculateTotalPrice() {
+        double totalPrice = 0;
+        for (MenuItem item : ShoppingCart) {
+            totalPrice += item.getItemPrice();
+        }
+        return totalPrice;
+    }
+
+    public void resetShoppingCart() {
+        this.ShoppingCart.clear();
+    }
 }

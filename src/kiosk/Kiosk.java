@@ -18,6 +18,8 @@ public class Kiosk {
 
         Menu menu = new Menu();
 
+        Order order = new Order();
+
         // 햄버거 객체 생성
         MenuItem hamburger1 = new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거");
         MenuItem hamburger2 = new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거");
@@ -56,7 +58,7 @@ public class Kiosk {
 
         // while문 실행.
         while (true) {
-            if (menu.getShoppingCart().size() > 0) {
+            if (order.getShoppingCart().size() > 0) {
                 System.out.println("[ MAIN MENU ]");
                 System.out.println("1. Burgers");
                 System.out.println("2. Drinks");
@@ -102,12 +104,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getHamburgerItems().get(0));
+                        order.addToShoppingCart(menu.getHamburgerItems().get(0));
                         System.out.println(menu.getHamburgerItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + " | W " + menu.getHamburgerItems().get(1).getItemPrice() + " | " + menu.getHamburgerItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
@@ -115,12 +117,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getHamburgerItems().get(1));
+                        order.addToShoppingCart(menu.getHamburgerItems().get(1));
                         System.out.println(menu.getHamburgerItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + " | W " + menu.getHamburgerItems().get(2).getItemPrice() + " | " + menu.getHamburgerItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
@@ -128,12 +130,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getHamburgerItems().get(2));
+                        order.addToShoppingCart(menu.getHamburgerItems().get(2));
                         System.out.println(menu.getHamburgerItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + " | W " + menu.getHamburgerItems().get(3).getItemPrice() + " | " + menu.getHamburgerItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
@@ -141,12 +143,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getHamburgerItems().get(3));
+                        order.addToShoppingCart(menu.getHamburgerItems().get(3));
                         System.out.println(menu.getHamburgerItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
@@ -176,12 +178,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDrinkItems().get(0));
+                        order.addToShoppingCart(menu.getDrinkItems().get(0));
                         System.out.println(menu.getDrinkItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(1).getItemName() + " | W " + menu.getDrinkItems().get(1).getItemPrice() + " | " + menu.getDrinkItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
@@ -189,12 +191,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDrinkItems().get(1));
+                        order.addToShoppingCart(menu.getDrinkItems().get(1));
                         System.out.println(menu.getDrinkItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(2).getItemName() + " | W " + menu.getDrinkItems().get(2).getItemPrice() + " | " + menu.getDrinkItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
@@ -202,12 +204,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDrinkItems().get(2));
+                        order.addToShoppingCart(menu.getDrinkItems().get(2));
                         System.out.println(menu.getDrinkItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(3).getItemName() + " | W " + menu.getDrinkItems().get(3).getItemPrice() + " | " + menu.getDrinkItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
@@ -215,12 +217,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDrinkItems().get(3));
+                        order.addToShoppingCart(menu.getDrinkItems().get(3));
                         System.out.println(menu.getDrinkItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
@@ -250,12 +252,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDessertItems().get(0));
+                        order.addToShoppingCart(menu.getDessertItems().get(0));
                         System.out.println(menu.getDessertItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + " | W " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
@@ -263,12 +265,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDessertItems().get(1));
+                        order.addToShoppingCart(menu.getDessertItems().get(1));
                         System.out.println(menu.getDessertItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + " | W " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
@@ -276,12 +278,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDessertItems().get(2));
+                        order.addToShoppingCart(menu.getDessertItems().get(2));
                         System.out.println(menu.getDessertItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + " | W " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
@@ -289,12 +291,12 @@ public class Kiosk {
                     System.out.println("1. 확인        2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
-                        menu.addToShoppingCart(menu.getDessertItems().get(3));
+                        order.addToShoppingCart(menu.getDessertItems().get(3));
                         System.out.println(menu.getDessertItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
-                    System.out.println("-----------------------------------");
+                    System.out.println("===================================");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
@@ -304,20 +306,14 @@ public class Kiosk {
                 System.out.println("아래와 같이 주문하시겠습니까?");
 
                 System.out.println();
-                System.out.println("[ Orders ]");
-                menu.printShoppingCart();
-
-                System.out.println();
-                System.out.println("[ Total ]");
-                System.out.println("W " + menu.calculateTotalPrice());
-                System.out.println();
+                order.printShoppingCart();
 
                 System.out.println("1. 주문        2. 메뉴판");
                 int finalSelectNumber = scanner.nextInt();
 
                 if (finalSelectNumber == 1) {
-                    System.out.println("주문이 완료되었습니다. 금액은 W " + menu.calculateTotalPrice() + " 입니다.");
-                    menu.resetShoppingCart();
+                    System.out.println("주문이 완료되었습니다. 금액은 W " + order.calculateTotalPrice() + " 입니다.");
+                    order.resetShoppingCart();
                     System.out.println("==================================================");
                 } else if (finalSelectNumber == 2) {
                     continue;

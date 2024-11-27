@@ -102,6 +102,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getHamburgerItems().get(0));
+                        System.out.println(menu.getHamburgerItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -113,6 +114,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getHamburgerItems().get(1));
+                        System.out.println(menu.getHamburgerItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -124,6 +126,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getHamburgerItems().get(2));
+                        System.out.println(menu.getHamburgerItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -135,6 +138,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getHamburgerItems().get(3));
+                        System.out.println(menu.getHamburgerItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -168,6 +172,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDrinkItems().get(0));
+                        System.out.println(menu.getDrinkItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -179,6 +184,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDrinkItems().get(1));
+                        System.out.println(menu.getDrinkItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -190,6 +196,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDrinkItems().get(2));
+                        System.out.println(menu.getDrinkItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -201,6 +208,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDrinkItems().get(3));
+                        System.out.println(menu.getDrinkItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -234,6 +242,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDessertItems().get(0));
+                        System.out.println(menu.getDessertItems().get(0).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -245,6 +254,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDessertItems().get(1));
+                        System.out.println(menu.getDessertItems().get(1).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -256,6 +266,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDessertItems().get(2));
+                        System.out.println(menu.getDessertItems().get(2).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }
@@ -267,6 +278,7 @@ public class Kiosk {
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         menu.addToShoppingCart(menu.getDessertItems().get(3));
+                        System.out.println(menu.getDessertItems().get(3).getItemName() + "이 장바구니에 추가되었습니다.");
                     } else if (orderNumber == 2){
                         continue;
                     }

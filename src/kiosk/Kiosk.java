@@ -56,16 +56,29 @@ public class Kiosk {
 
         // while문 실행.
         while (true) {
-            System.out.println("[ MAIN MENU ]");
-            System.out.println("1. Burgers");
-            System.out.println("2. Drinks");
-            System.out.println("3. Desserts");
-            System.out.println("0. 종료");
-            int number1 = scanner.nextInt();
+            if (menu.getShoppingCart().size() > 0) {
+                System.out.println("[ MAIN MENU ]");
+                System.out.println("1. Burgers");
+                System.out.println("2. Drinks");
+                System.out.println("3. Desserts");
+                System.out.println("0. 종료");
+                System.out.println();
+                System.out.println("[ ORDER MENU ]");
+                System.out.println("4. Orders");
+                System.out.println("5. Cancel");
+            } else {
+                System.out.println("[ MAIN MENU ]");
+                System.out.println("1. Burgers");
+                System.out.println("2. Drinks");
+                System.out.println("3. Desserts");
+                System.out.println("0. 종료");
+            }
 
-            System.out.println("===================================");
+            int mainNumber = scanner.nextInt();
 
-            if (number1 == 1) {
+            System.out.println("-----------------------------------");
+
+            if (mainNumber == 1) {
                 // 안내 문구 출력
                 System.out.println("[ BURGERS MENU ]");
 
@@ -73,33 +86,65 @@ public class Kiosk {
 
                 System.out.println(String.format("0. %-14s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
-                int number2 = scanner.nextInt();
+                int itemNumber = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
-                if (number2 == 0) {
+                if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
                     continue;
-                } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + " | W " + menu.getHamburgerItems().get(0).getItemPrice() + " | " + menu.getHamburgerItems().get(0).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getHamburgerItems().get(0));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + " | W " + menu.getHamburgerItems().get(1).getItemPrice() + " | " + menu.getHamburgerItems().get(1).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getHamburgerItems().get(1));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + " | W " + menu.getHamburgerItems().get(2).getItemPrice() + " | " + menu.getHamburgerItems().get(2).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getHamburgerItems().get(2));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + " | W " + menu.getHamburgerItems().get(3).getItemPrice() + " | " + menu.getHamburgerItems().get(3).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getHamburgerItems().get(3));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
                     continue;
                 }
-            } else if (number1 == 2) {
+            } else if (mainNumber == 2) {
                 // 안내 문구 출력
                 System.out.println("[ DRINKS MENU ]");
 
@@ -107,33 +152,65 @@ public class Kiosk {
 
                 System.out.println(String.format("0. %-13s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
-                int number2 = scanner.nextInt();
+                int itemNumber = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
-                if (number2 == 0) {
+                if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
                     continue;
-                } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(0).getItemName() + " | W " + menu.getDrinkItems().get(0).getItemPrice() + " | " + menu.getDrinkItems().get(0).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDrinkItems().get(0));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(1).getItemName() + " | W " + menu.getDrinkItems().get(1).getItemPrice() + " | " + menu.getDrinkItems().get(1).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDrinkItems().get(1));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(2).getItemName() + " | W " + menu.getDrinkItems().get(2).getItemPrice() + " | " + menu.getDrinkItems().get(2).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDrinkItems().get(2));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(3).getItemName() + " | W " + menu.getDrinkItems().get(3).getItemPrice() + " | " + menu.getDrinkItems().get(3).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDrinkItems().get(3));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
                     continue;
                 }
-            } else if (number1 == 3) {
+            } else if (mainNumber == 3) {
                 // 안내 문구 출력
                 System.out.println("[ DESSERTS MENU ]");
 
@@ -141,33 +218,69 @@ public class Kiosk {
 
                 System.out.println(String.format("0. %-17s | %s", "뒤로가기", "뒤로가기"));
                 // 사용자로부터 정수형 값을 입력받아 변수 number에 저장.
-                int number2 = scanner.nextInt();
+                int itemNumber = scanner.nextInt();
 
                 // if문을 사용해서 number의 값이 0일 때 실행.
-                if (number2 == 0) {
+                if (itemNumber == 0) {
                     // 프로그램 종료 안내 문구 출력.
                     System.out.println("Main Menu로 돌아갑니다.");
                     System.out.println("===================================");
                     //
                     continue;
-                } else if (number2 == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 1) {  // 1번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(0).getItemName() + " | W " + menu.getDessertItems().get(0).getItemPrice() + ", " + menu.getDessertItems().get(0).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDessertItems().get(0));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 2) {  // 2번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + " | W " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDessertItems().get(1));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 3) {  // 3번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + " | W " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDessertItems().get(2));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
-                } else if (number2 == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
+                } else if (itemNumber == 4) {  // 4번 메뉴를 선택했을 때 출력되는 문구
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + " | W " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
+                    System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
+                    System.out.println("1. 확인        2. 취소");
+                    int orderNumber = scanner.nextInt();
+                    if (orderNumber == 1) {
+                        menu.addToShoppingCart(menu.getDessertItems().get(3));
+                    } else if (orderNumber == 2){
+                        continue;
+                    }
                     System.out.println("-----------------------------------");
                 } else {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 :)");
                     System.out.println("===================================");
                     continue;
                 }
-            } else if (number1 == 0) {
+            } else if (mainNumber == 4) {
+
+            } else if (mainNumber == 5) {
+
+            } else if (mainNumber == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }

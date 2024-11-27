@@ -354,15 +354,16 @@ public class Kiosk {
                     order.resetShoppingCart();
                     System.out.println("==================================================");
                 } else if (finalSelectNumber == 2) {
+                    System.out.println("==================================================");
                     continue;
                 }
             } else if (mainNumber == 5) {
                 System.out.println("1. 선택 삭제    2. 전체 삭제    3. 메뉴판");
                 int cancelNumber = scanner.nextInt();
 
-                System.out.println("-----------------------------------");
-
                 if (cancelNumber == 1) {
+                    System.out.println("-----------------------------------");
+
                     order.printShoppingCart();
 
                     System.out.println("어떤 항목을 삭제하시겠습니까?");
@@ -379,9 +380,12 @@ public class Kiosk {
                     System.out.println("===================================");
                 } else if (cancelNumber == 2) {
                     order.resetShoppingCart();
+
+                    System.out.println("-----------------------------------");
                     System.out.println("장바구니를 비웠습니다.");
                     System.out.println("===================================");
                 } else if (cancelNumber == 3) {
+                    System.out.println("===================================");
                     continue;
                 }
             } else if (mainNumber == 0) {

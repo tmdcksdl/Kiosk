@@ -24,7 +24,7 @@ public class MenuItem {
      * 햄버거 이름을 가져오는 메서드
      * @return 햄버거 이름(burgerName)
      */
-    public String getItemName () {
+    public String getItemName() {
         return this.itemName;
     }
 
@@ -32,7 +32,7 @@ public class MenuItem {
      * 햄버거 가격을 가져오는 메서드
      * @return 햄버거 가격(burgerPrice)
      */
-    public double getItemPrice () {
+    public double getItemPrice() {
         return this.itemPrice;
     }
 
@@ -40,7 +40,7 @@ public class MenuItem {
      * 햄버거 설명을 가져오는 메서드
      * @return 햄버거 설명(burgerComment)
      */
-    public String getItemComment () {
+    public String getItemComment() {
         return this.itemComment;
     }
 }

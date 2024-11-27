@@ -1,5 +1,6 @@
 package kiosk;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Kiosk {
@@ -58,7 +59,9 @@ public class Kiosk {
 
         // while문 실행.
         while (true) {
-            if (order.getShoppingCart().size() > 0) {
+            int mainNumber;
+
+            if (!order.getShoppingCart().isEmpty()) {
                 System.out.println("[ MAIN MENU ]");
                 System.out.println("1. Burgers");
                 System.out.println("2. Drinks");
@@ -68,15 +71,47 @@ public class Kiosk {
                 System.out.println("[ ORDER MENU ]");
                 System.out.println("4. Orders");
                 System.out.println("5. Cancel");
+
+                try {
+                    mainNumber = scanner.nextInt();
+
+                    if (!(0 <= mainNumber && mainNumber <= 5)) {
+                        System.out.println("-----------------------------------");
+                        System.out.println("유효하지 않은 메뉴 번호를 입력했습니다. 다시 입력해주세요 :)");
+                        System.out.println("===================================");
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("-----------------------------------");
+                    System.out.println("잘못된 입력입니다. 숫자를 입력해주세요 :)");
+                    scanner.nextLine();
+                    System.out.println("===================================");
+                    continue;
+                }
+
             } else {
                 System.out.println("[ MAIN MENU ]");
                 System.out.println("1. Burgers");
                 System.out.println("2. Drinks");
                 System.out.println("3. Desserts");
                 System.out.println("0. 종료");
-            }
 
-            int mainNumber = scanner.nextInt();
+                try {
+                    mainNumber = scanner.nextInt();
+
+                    if (!(0 <= mainNumber && mainNumber <= 3)) {
+                        System.out.println("-----------------------------------");
+                        System.out.println("유효하지 않은 메뉴 번호를 입력했습니다. 다시 입력해주세요 :)");
+                        System.out.println("===================================");
+                        continue;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("-----------------------------------");
+                    System.out.println("잘못된 입력입니다. 숫자를 입력해주세요 :)");
+                    scanner.nextLine();
+                    System.out.println("===================================");
+                    continue;
+                }
+            }
 
             System.out.println("===================================");
 

@@ -53,6 +53,10 @@ public class Order {
         return Math.round(totalPrice * 10) / 10.0;
     }
 
+    public void cancelShoppingCart(int index) {
+        this.ShoppingCart.remove(index);
+    }
+
     public void resetShoppingCart() {
         this.ShoppingCart.clear();
     }

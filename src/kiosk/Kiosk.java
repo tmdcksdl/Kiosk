@@ -137,7 +137,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(0).getItemName() + " | W " + menu.getHamburgerItems().get(0).getItemPrice() + " | " + menu.getHamburgerItems().get(0).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getHamburgerItems().get(0));
@@ -150,7 +150,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(1).getItemName() + " | W " + menu.getHamburgerItems().get(1).getItemPrice() + " | " + menu.getHamburgerItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getHamburgerItems().get(1));
@@ -163,7 +163,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(2).getItemName() + " | W " + menu.getHamburgerItems().get(2).getItemPrice() + " | " + menu.getHamburgerItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getHamburgerItems().get(2));
@@ -176,7 +176,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getHamburgerItems().get(3).getItemName() + " | W " + menu.getHamburgerItems().get(3).getItemPrice() + " | " + menu.getHamburgerItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getHamburgerItems().get(3));
@@ -212,7 +212,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(0).getItemName() + " | W " + menu.getDrinkItems().get(0).getItemPrice() + " | " + menu.getDrinkItems().get(0).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDrinkItems().get(0));
@@ -225,7 +225,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(1).getItemName() + " | W " + menu.getDrinkItems().get(1).getItemPrice() + " | " + menu.getDrinkItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDrinkItems().get(1));
@@ -238,7 +238,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(2).getItemName() + " | W " + menu.getDrinkItems().get(2).getItemPrice() + " | " + menu.getDrinkItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDrinkItems().get(2));
@@ -251,7 +251,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDrinkItems().get(3).getItemName() + " | W " + menu.getDrinkItems().get(3).getItemPrice() + " | " + menu.getDrinkItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDrinkItems().get(3));
@@ -287,7 +287,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(0).getItemName() + " | W " + menu.getDessertItems().get(0).getItemPrice() + ", " + menu.getDessertItems().get(0).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDessertItems().get(0));
@@ -300,7 +300,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(1).getItemName() + " | W " + menu.getDessertItems().get(1).getItemPrice() + ", " + menu.getDessertItems().get(1).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDessertItems().get(1));
@@ -313,7 +313,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(2).getItemName() + " | W " + menu.getDessertItems().get(2).getItemPrice() + ", " + menu.getDessertItems().get(2).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDessertItems().get(2));
@@ -326,7 +326,7 @@ public class Kiosk {
                     System.out.println("선택한 메뉴 : " + menu.getDessertItems().get(3).getItemName() + " | W " + menu.getDessertItems().get(3).getItemPrice() + ", " + menu.getDessertItems().get(3).getItemComment());
                     System.out.println("-----------------------------------");
                     System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-                    System.out.println("1. 확인        2. 취소");
+                    System.out.println("1. 확인    2. 취소");
                     int orderNumber = scanner.nextInt();
                     if (orderNumber == 1) {
                         order.addToShoppingCart(menu.getDessertItems().get(3));
@@ -346,7 +346,7 @@ public class Kiosk {
                 System.out.println();
                 order.printShoppingCart();
 
-                System.out.println("1. 주문        2. 메뉴판");
+                System.out.println("1. 주문    2. 메뉴판");
                 int finalSelectNumber = scanner.nextInt();
 
                 if (finalSelectNumber == 1) {
@@ -357,7 +357,7 @@ public class Kiosk {
                     continue;
                 }
             } else if (mainNumber == 5) {
-                System.out.println("1. 선택 삭제        2. 전체 삭제");
+                System.out.println("1. 선택 삭제    2. 전체 삭제    3. 메뉴판");
                 int cancelNumber = scanner.nextInt();
 
                 System.out.println("-----------------------------------");
@@ -381,6 +381,8 @@ public class Kiosk {
                     order.resetShoppingCart();
                     System.out.println("장바구니를 비웠습니다.");
                     System.out.println("===================================");
+                } else if (cancelNumber == 3) {
+                    continue;
                 }
             } else if (mainNumber == 0) {
                 System.out.println("프로그램을 종료합니다.");

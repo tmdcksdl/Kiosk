@@ -319,7 +319,22 @@ public class Kiosk {
                     continue;
                 }
             } else if (mainNumber == 5) {
+                System.out.println("1. 선택 삭제        2. 전체 삭제");
+                int cancelNumber = scanner.nextInt();
 
+                if (cancelNumber == 1) {
+                    order.printShoppingCart();
+                    System.out.println("어떤 항목을 삭제하시겠습니까?");
+                    int cartNumber = scanner.nextInt();
+
+                    order.cancelShoppingCart(cartNumber-1);
+
+                    System.out.println("선택한 항목을 장바구니에서 삭제했습니다.");
+
+                    order.printShoppingCart();
+                } else if (cancelNumber == 2) {
+                    order.resetShoppingCart();
+                }
             } else if (mainNumber == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
